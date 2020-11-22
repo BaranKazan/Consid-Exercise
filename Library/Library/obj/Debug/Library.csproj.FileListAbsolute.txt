@@ -1,6 +1,0 @@
-/Users/barankazan/Documents/GitHub/Consid-Project/Library/Library/bin/Debug/Library.exe
-/Users/barankazan/Documents/GitHub/Consid-Project/Library/Library/bin/Debug/Library.pdb
-/Users/barankazan/Documents/GitHub/Consid-Project/Library/Library/obj/Debug/Library.csprojAssemblyReference.cache
-/Users/barankazan/Documents/GitHub/Consid-Project/Library/Library/obj/Debug/Library.csproj.CoreCompileInputs.cache
-/Users/barankazan/Documents/GitHub/Consid-Project/Library/Library/obj/Debug/Library.exe
-/Users/barankazan/Documents/GitHub/Consid-Project/Library/Library/obj/Debug/Library.pdb
