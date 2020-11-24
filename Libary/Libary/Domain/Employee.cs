@@ -35,5 +35,9 @@ namespace Library.Domain
         public bool IsManager { set; get; }
         public int? ManagerId { set; get; }
 
+        public void Print()
+        {
+            Console.WriteLine($"{Id}, {FirstName}, {LastName}, {Salary}, {IsCEO}, {IsManager}, {ManagerId}");
+        }
     }
 }

@@ -46,7 +46,7 @@ namespace Library.DAO
                 if (!dataReader.Read())
                     throw new Exception("The ID does not exist.");
 
-                category = new Category((int)dataReader.GetValue(0), (String)dataReader.GetValue(1));
+                category = new Category(dataReader.GetInt32(0), dataReader.GetString(1));
                 dataReader.Close();
                 connectionManager.CloseConnection();
             }
@@ -65,14 +65,14 @@ namespace Library.DAO
                 SqlDataReader dataReader = connectionManager.ReadData("SELECT * FROM Category");
                 categories = new List<Category>();
                 if (!dataReader.Read())
-                    throw new Exception("The ID does not exist.");
+                    throw new Exception("The table is empty.");
 
                 do
                 {
-                    categories.Add(new Category((int)dataReader.GetValue(0), (String)dataReader.GetValue(1)));
+                    categories.Add(new Category(dataReader.GetInt32(0), dataReader.GetString(1)));
                 }
                 while (dataReader.Read());
-               
+
                 dataReader.Close();
                 connectionManager.CloseConnection();
             }

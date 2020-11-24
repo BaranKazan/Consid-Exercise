@@ -20,5 +20,9 @@ namespace Library.Domain
         public int Id { get; set; }
         public String CategoryName { get; set; }
 
+        public void Print()
+        {
+            Console.WriteLine($"{Id}, {CategoryName}");
+        }
     }
 }
