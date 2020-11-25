@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using Libary.DAO;
 using Library.Domain;
 
 namespace Library.DAO

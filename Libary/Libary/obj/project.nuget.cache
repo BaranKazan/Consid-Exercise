@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O7QK66ZanyYyOHyetczQfutc5NbgSl5Uk/Q5jRJCLqPNWhq5W3bjnWkIJb8AC86lZZVe3AHvpEZ6+BS9GyEz1w==",
+  "dgSpecHash": "x+S40R35wZj9lybnl5iccCaFS56WXAR2wDzRGRqrMaZzz/dpyxLPoQVidMYfHukK3WkwW9vWz0/iZOb2CFJ6eg==",
   "success": true,
-  "projectFilePath": "/Users/barankazan/Documents/GitHub/Consid-Project/Libary/Libary/Libary.csproj",
+  "projectFilePath": "/Users/barankazan/Documents/GitHub/Consid-Project/Libary/Libary/Library.csproj",
   "expectedPackageFiles": [
     "/Users/barankazan/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/Users/barankazan/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",

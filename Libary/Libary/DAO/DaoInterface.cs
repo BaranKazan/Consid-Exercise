@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Libary.DAO
+namespace Library.DAO
 {
     public interface DaoInterface<T>
     {

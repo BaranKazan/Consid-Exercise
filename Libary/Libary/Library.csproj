@@ -10,5 +10,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
+    <Folder Include="Service\Add\" />
+    <Folder Include="Service\Update\" />
+    <Folder Include="Service\Delete\" />
+    <Folder Include="Service\Get\" />
   </ItemGroup>
 </Project>

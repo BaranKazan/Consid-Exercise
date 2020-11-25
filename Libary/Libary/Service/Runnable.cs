@@ -1,5 +1,4 @@
-﻿using System;
-namespace Libary.Service
+﻿namespace Library.Service
 {
     public interface Runnable<T>
     {

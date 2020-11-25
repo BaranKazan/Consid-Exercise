@@ -459,9 +459,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/barankazan/Documents/GitHub/Consid-Project/Libary/Libary/Libary.csproj",
-      "projectName": "Libary",
-      "projectPath": "/Users/barankazan/Documents/GitHub/Consid-Project/Libary/Libary/Libary.csproj",
+      "projectUniqueName": "/Users/barankazan/Documents/GitHub/Consid-Project/Libary/Libary/Library.csproj",
+      "projectName": "Library",
+      "projectPath": "/Users/barankazan/Documents/GitHub/Consid-Project/Libary/Libary/Library.csproj",
       "packagesPath": "/Users/barankazan/.nuget/packages/",
       "outputPath": "/Users/barankazan/Documents/GitHub/Consid-Project/Libary/Libary/obj/",
       "projectStyle": "PackageReference",

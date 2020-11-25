@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using Library.DAO;
 using Library.Domain;
 
-namespace Libary.DAO
+namespace Library.DAO
 {
     public class LibraryItemDao : DaoInterface<LibraryItem>
     {
