@@ -1,4 +1,6 @@
 ﻿using System;
+using Library.Helper;
+
 namespace Library.Domain
 {
     public class LibraryItem
@@ -48,7 +50,9 @@ namespace Library.Domain
 
         public void Print()
         {
-            Console.WriteLine($"{Id}, {CategoryId}, {Title}, {Author}, {Pages}, {RunTimeMinutes}, {IsBorrowable}, {Borrower}, {BorrowDate}, {Type}");
+            Console.WriteLine($"ID: {Id}, CategoryID: {CategoryId}, Tittle: {ChangeInput.AcronymTheTittle(Title)}, " +
+                $"Author: {Author}, Pages: {Pages}, Run Time Minutes: {RunTimeMinutes}, Borrowable: {IsBorrowable}, " +
+                $"Borrower: {Borrower}, Borrowed Date: {BorrowDate}, Type: {Type}");
         }
     }
 }

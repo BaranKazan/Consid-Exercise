@@ -14,5 +14,6 @@
     <Folder Include="Service\Update\" />
     <Folder Include="Service\Delete\" />
     <Folder Include="Service\Get\" />
+    <Folder Include="Helper\" />
   </ItemGroup>
 </Project>

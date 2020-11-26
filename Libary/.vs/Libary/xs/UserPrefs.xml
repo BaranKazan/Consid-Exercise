@@ -1,33 +1,25 @@
 ﻿<Properties StartupConfiguration="{3CF33239-0F4B-4DDF-825D-C2BD807AD9B8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Libary/Service/Update/UpdateCategory.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Libary/DAO/EmployeeDao.cs">
     <Files>
-      <File FileName="Libary/Program.cs" Line="13" Column="6" />
-      <File FileName="Libary/Service/ServiceRunner.cs" Line="6" Column="25" />
-      <File FileName="Libary/Service/Delete/DeleteCategory.cs" Line="2" Column="18" />
-      <File FileName="Libary/DAO/LibraryItemDao.cs" Line="10" Column="13" />
-      <File FileName="Libary/DAO/CategoryDao.cs" Line="3" Column="29" />
+      <File FileName="Libary/Program.cs" Line="12" Column="18" />
+      <File FileName="Libary/Service/Get/SortLibraryItemByCategory.cs" Line="1" Column="1" />
+      <File FileName="Libary/Service/Get/SortLibraryItemByType.cs" Line="1" Column="1" />
+      <File FileName="Libary/Helper/ChangeInput.cs" Line="8" Column="28" />
+      <File FileName="Libary/Domain/LibraryItem.cs" Line="45" Column="45" />
       <File FileName="Libary/DAO/EmployeeDao.cs" Line="1" Column="1" />
-      <File FileName="Libary/DAO/DaoInterface.cs" Line="1" Column="1" />
-      <File FileName="Libary/DAO/ConnectionManager.cs" Line="5" Column="20" />
-      <File FileName="Libary/Domain/Category.cs" Line="1" Column="1" />
-      <File FileName="Libary/Domain/Employee.cs" Line="1" Column="1" />
-      <File FileName="Libary/Domain/LibraryItem.cs" Line="1" Column="1" />
-      <File FileName="Libary/Service/Update/UpdateCategory.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Libary" expanded="True">
-            <Node name="Libary" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="DAO" expanded="True" />
+            <Node name="Library" expanded="True">
+              <Node name="DAO" expanded="True">
+                <Node name="EmployeeDao.cs" selected="True" />
+              </Node>
               <Node name="Domain" expanded="True" />
+              <Node name="Helper" expanded="True" />
               <Node name="Service" expanded="True">
-                <Node name="Add" expanded="True" />
-                <Node name="Delete" expanded="True" />
-                <Node name="Update" expanded="True">
-                  <Node name="UpdateCategory.cs" selected="True" />
-                </Node>
+                <Node name="Get" expanded="True" />
               </Node>
             </Node>
           </Node>

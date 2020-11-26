@@ -125,7 +125,8 @@ namespace Library.DAO
                     $"Pages={(libraryItem.Pages != null ? libraryItem.Pages.ToString() : "null")}, " +
                     $"RunTimeMinutes={(libraryItem.RunTimeMinutes != null ? libraryItem.RunTimeMinutes.ToString() : "null")}, " +
                     $"IsBorrowable={(libraryItem.IsBorrowable ? 1 : 0)}, Borrower='{libraryItem.Borrower}', " +
-                    $"BorrowDate={(libraryItem.BorrowDate != null ? "'" + Convert.ToDateTime(libraryItem.BorrowDate).ToString("yyyy-MM-dd") + "'" : "null")}, Type='{libraryItem.Type}' " +
+                    $"BorrowDate={(libraryItem.BorrowDate != null ? "'"+Convert.ToDateTime(libraryItem.BorrowDate).ToString("yyyy-MM-dd")+"'" : "null")}, " +
+                    $"Type='{libraryItem.Type}' " +
                     $"WHERE Id = {libraryItem.Id}");
                 dataChanged = true;
             }
