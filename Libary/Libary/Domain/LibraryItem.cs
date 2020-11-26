@@ -3,6 +3,9 @@ using Library.Helper;
 
 namespace Library.Domain
 {
+    /*
+     * This class is a domain of LibraryItem.
+     */
     public class LibraryItem
     {
 

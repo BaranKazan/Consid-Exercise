@@ -5,6 +5,10 @@ using Library.Domain;
 
 namespace Library.DAO
 {
+
+    /*
+     * This class follows the DAO desgin pattern which handles the communications between the Category table in the database.
+     */
     public class CategoryDao : DaoInterface<Category>
     {
 

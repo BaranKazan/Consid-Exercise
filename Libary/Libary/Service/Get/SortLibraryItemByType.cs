@@ -5,6 +5,9 @@ using Library.Domain;
 
 namespace Library.Service.Get
 {
+    /*
+     * Sorts the LibraryItem by the type. 
+     */
     public class SortLibraryItemByType : Runnable<List<LibraryItem>>
     {
 

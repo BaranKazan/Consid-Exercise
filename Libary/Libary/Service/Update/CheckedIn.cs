@@ -4,6 +4,9 @@ using Library.Domain;
 
 namespace Library.Service.Update
 {
+    /*
+     * Checks in a item that was returned by the user.
+     */
     public class CheckedIn : Runnable<bool>
     {
 

@@ -3,6 +3,9 @@ using Library.DAO;
 
 namespace Library.Service.Delete
 {
+    /*
+     * Delete a row from LibraryItem table in the database.
+     */
     public class DeleteLibraryItem : Runnable<bool>
     {
 

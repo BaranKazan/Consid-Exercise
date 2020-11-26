@@ -3,6 +3,9 @@
 namespace Library.Domain
 {
 
+    /*
+     * This class is a domain of Category.
+     */
     public class Category
     {
 

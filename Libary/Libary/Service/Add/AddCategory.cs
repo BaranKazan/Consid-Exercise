@@ -4,6 +4,9 @@ using Library.Domain;
 
 namespace Library.Service.Add
 {
+    /*
+     * Adds a new row to the Category table in the database
+     */
     public class AddCategory : Runnable<bool>
     {
 

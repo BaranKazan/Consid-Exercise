@@ -2,6 +2,10 @@
 
 namespace Library.DAO
 {
+
+    /*
+     * Interface that applies the DAO design pattern when implemented.
+     */
     public interface DaoInterface<T>
     {
         public T Get(int id);

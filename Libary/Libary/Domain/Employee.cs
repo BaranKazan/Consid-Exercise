@@ -1,6 +1,10 @@
 ﻿using System;
 namespace Library.Domain
 {
+
+    /*
+     * This class is a domain of Employee
+     */
     public class Employee
     {
 

@@ -3,6 +3,9 @@ using System.Data.SqlClient;
 
 namespace Library.DAO
 {
+    /*
+     * This class connects to the database and follows the Singleton design pattern.
+     */
     public class ConnectionManager
     {
         private SqlConnection connection = null;

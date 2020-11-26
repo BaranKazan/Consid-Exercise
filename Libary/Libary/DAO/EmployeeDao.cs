@@ -5,6 +5,10 @@ using Library.Domain;
 
 namespace Library.DAO
 {
+
+    /*
+     * Handles the communication with the Employee table in the database.
+     */
     public class EmployeeDao : DaoInterface<Employee>
     {
 

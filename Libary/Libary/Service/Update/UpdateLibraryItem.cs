@@ -4,6 +4,9 @@ using Library.Domain;
 
 namespace Library.Service.Update
 {
+    /*
+     * Updates a row in the LibraryItem table.
+     */
     public class UpdateLibraryItem : Runnable<bool>
     {
         private int id;

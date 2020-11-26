@@ -4,6 +4,9 @@ using Library.Domain;
 
 namespace Library.Service.Update
 {
+    /*
+     * Checks out a item that the user wants to borrow.
+     */
     public class CheckedOut : Runnable<bool>
     {
 
@@ -20,6 +23,8 @@ namespace Library.Service.Update
         public bool Run()
         {
             LibraryItem libraryItem = libraryItemDao.Get(this.itemId);
+            if (libraryItem.IsBorrowable)
+                throw new Exception("The item is not allowed to be borrowed.");
             libraryItem.BorrowDate = DateTime.Now;
             libraryItem.Borrower = this.borrower;
             return libraryItemDao.Update(libraryItem);

@@ -4,6 +4,9 @@ using Library.Domain;
 
 namespace Library.Service.Update
 {
+    /*
+     * Updates a row in the Category table.
+     */
     public class UpdateCategory : Runnable<bool>
     {
 

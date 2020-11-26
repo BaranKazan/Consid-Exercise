@@ -5,6 +5,9 @@ using Library.Domain;
 
 namespace Library.Service.Delete
 {
+    /*
+     * Deletes a row in the Category table. 
+     */
     public class DeleteCategory : Runnable<bool>
     {
 

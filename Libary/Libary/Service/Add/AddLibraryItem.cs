@@ -4,6 +4,9 @@ using Library.Domain;
 
 namespace Library.Service.Add
 {
+    /*
+     * Saves a new row to the LibraryItem table in the database.
+     */
     public class AddLibraryItem : Runnable<bool>
     {
         private int categoryId;

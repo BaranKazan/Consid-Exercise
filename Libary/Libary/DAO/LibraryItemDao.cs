@@ -5,6 +5,9 @@ using Library.Domain;
 
 namespace Library.DAO
 {
+    /* 
+     * Handles the communication with the LibraryItem table in the database.
+     */
     public class LibraryItemDao : DaoInterface<LibraryItem>
     {
 
