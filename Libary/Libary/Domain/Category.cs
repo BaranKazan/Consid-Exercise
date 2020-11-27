@@ -6,7 +6,7 @@ namespace Library.Domain
     /*
      * This class is a domain of Category.
      */
-    public class Category
+    public class Category : DomainInterface
     {
 
         public Category(String CategoryName)
@@ -25,7 +25,7 @@ namespace Library.Domain
 
         public void Print()
         {
-            Console.WriteLine($"{Id}, {CategoryName}");
+            Console.WriteLine($"ID: {Id}, Category name: {CategoryName}");
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Library.Service.Update
         public bool Run()
         {
             LibraryItem libraryItem = libraryItemDao.Get(this.itemId);
+
             if (libraryItem.IsBorrowable)
                 throw new Exception("The item is not allowed to be borrowed.");
             libraryItem.BorrowDate = DateTime.Today;

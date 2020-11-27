@@ -5,6 +5,11 @@ using Library.Domain;
 
 namespace Library.Service.Update
 {
+
+    /*
+     * Updates the employee, the implementation is familiar with the save function.
+     */
+
     public class UpdateEmployee : Runnable<bool>
     {
         private int id;
@@ -77,7 +82,6 @@ namespace Library.Service.Update
                         {
                             if (employee3.Id == this.managerId && !(employee3.Id == employee3.ManagerId))
                             {
-                                Console.WriteLine(employee3.IsManager);
                                 if (employee3.IsManager && !employee3.IsCEO)
                                     return employeeDao.Update(new Employee(this.id, this.firstName, this.lastName, this.salary, this.isCeo, this.isManager, this.managerId));
                                 else

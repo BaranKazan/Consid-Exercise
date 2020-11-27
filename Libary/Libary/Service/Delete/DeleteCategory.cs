@@ -23,6 +23,10 @@ namespace Library.Service.Delete
 
         }
 
+        /*
+         * There is no need to check if the key is refered in the LibraryItem
+         * table becuase the database does that for us.
+         */
         public bool Run()
         {
             List<LibraryItem> libraryItemList = libraryItemDao.GetAll();

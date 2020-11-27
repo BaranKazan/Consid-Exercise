@@ -14,7 +14,7 @@ namespace Library
     {
         public static void Main(string[] args)
         {
-            ServiceRunner<bool> servericeRunner = new ServiceRunner<bool>(new UpdateEmployee(13, "Manager", "Manager", 1.8F, false, false, 14));
+            ServiceRunner<bool> servericeRunner = new ServiceRunner<bool>(new UpdateLibraryItem(1, 1, "Title", "Author", 2, null, true, "Type"));
 
             Console.WriteLine(servericeRunner.Run());
         }

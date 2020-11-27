@@ -5,6 +5,13 @@ using Library.Domain;
 
 namespace Library.Service.Add
 {
+
+    /*
+     * This class adds a new Employee into the table.
+     * 
+     * It checks the parameter first before storing the data.
+     */
+
     public class AddEmployee : Runnable<bool>
     {
 

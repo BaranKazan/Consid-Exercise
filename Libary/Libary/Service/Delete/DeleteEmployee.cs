@@ -5,6 +5,14 @@ using Library.Domain;
 
 namespace Library.Service.Delete
 {
+
+    /*
+     * This class deletes a employee.
+     * 
+     * First it checks the other employee if they refered the one that
+     * is about to get removed from the table. 
+     */
+
     public class DeleteEmployee : Runnable<bool>
     {
 
@@ -18,22 +26,33 @@ namespace Library.Service.Delete
 
         public bool Run()
         {
-
             List<Employee> employees = employeeDao.GetAll();
+            Employee match = null;
+            Employee referedEmployee = null;
             foreach(Employee employee in employees)
             {
                 if(employee.Id == this.id)
                 {
-                    foreach(Employee employee1 in employees)
-                    {
-                        if (employee.Id == employee1.ManagerId)
-                            throw new Exception($"The ID is refered by the user ID {employee1.Id}");
-                    }
-                    return employeeDao.Delete(this.id);
+                    match = employee;
+                }
+                if(this.id == employee.ManagerId)
+                {
+                    referedEmployee = employee;
                 }
 
             }
-            throw new Exception("The ID does not exist.");
+            if (referedEmployee != null)
+            {
+                throw new Exception($"The ID is refered by the user ID {referedEmployee.Id}");
+            }
+            else if(match != null)
+            {
+                return employeeDao.Delete(this.id);
+            }
+            else
+            {
+                throw new Exception("The ID does not exist.");
+            }
         }
     }
 }

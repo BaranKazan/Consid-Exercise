@@ -6,7 +6,7 @@ namespace Library.Domain
     /*
      * This class is a domain of LibraryItem.
      */
-    public class LibraryItem
+    public class LibraryItem : DomainInterface
     {
 
         public LibraryItem(int CategoryId, String Title, String Author,

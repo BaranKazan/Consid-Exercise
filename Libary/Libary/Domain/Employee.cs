@@ -5,8 +5,10 @@ namespace Library.Domain
     /*
      * This class is a domain of Employee
      */
-    public class Employee
+    public class Employee : DomainInterface
     {
+
+        private const int BASE_SALARY = 20000;
 
         public Employee(String FirstName, String LastName, float Salary,
             bool IsCEO, bool IsManager, int? ManagerId)
@@ -41,7 +43,8 @@ namespace Library.Domain
 
         public void Print()
         {
-            Console.WriteLine($"{Id}, {FirstName}, {LastName}, {Salary}, {IsCEO}, {IsManager}, {ManagerId}");
+            Console.WriteLine($"ID: {Id}, Firstname: {FirstName}, Lastname: {LastName}, " +
+                $"Salary: {Salary*BASE_SALARY}, CEO: {IsCEO}, Manager: {IsManager}, ManagerID: {ManagerId}");
         }
     }
 }

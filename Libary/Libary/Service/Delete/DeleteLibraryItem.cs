@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Library.DAO;
+using Library.Domain;
 
 namespace Library.Service.Delete
 {
@@ -19,7 +21,15 @@ namespace Library.Service.Delete
 
         public bool Run()
         {
-            return libraryItemDao.Delete(id);
+            List<LibraryItem> items = libraryItemDao.GetAll();
+            foreach(LibraryItem item in items)
+            {
+                if(this.id == item.Id)
+                {
+                    return libraryItemDao.Delete(id);
+                }
+            }
+            throw new Exception("The ID does not exits in the LibraryItem");
         }
     }
 }
