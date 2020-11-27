@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Library.DAO;
 using Library.Domain;
 
@@ -38,7 +39,15 @@ namespace Library.Service.Update
 
         public bool Run()
         {
-            return libraryItemDao.Update(new LibraryItem(id, categoryId, title, author, pages, runTimeMinutes, isBorrowable, borrower, borrowDate, type));
+            List<LibraryItem> items = libraryItemDao.GetAll();
+            foreach(LibraryItem item in items)
+            {
+                if(item.Id == this.id)
+                {
+                    return libraryItemDao.Update(new LibraryItem(id, categoryId, title, author, pages, runTimeMinutes, isBorrowable, borrower, borrowDate, type));
+                }
+            }
+            throw new Exception("The ID does not exist.");
         }
     }
 }

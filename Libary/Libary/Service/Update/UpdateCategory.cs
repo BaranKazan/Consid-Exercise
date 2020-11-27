@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Library.DAO;
 using Library.Domain;
 
@@ -22,7 +23,15 @@ namespace Library.Service.Update
 
         public bool Run()
         {
-            return categoryDao.Update(new Category(this.Id, this.categoryName));
+            List<Category> categories = categoryDao.GetAll();
+            foreach(Category category in categories)
+            {
+                if(category.Id == this.Id)
+                {
+                    return categoryDao.Update(new Category(this.Id, this.categoryName));
+                }
+            }
+            throw new Exception("The ID does not exist.");
         }
     }
 }

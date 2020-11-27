@@ -14,15 +14,9 @@ namespace Library
     {
         public static void Main(string[] args)
         {
-            ServiceRunner<List<LibraryItem>> servericeRunner = new ServiceRunner<List<LibraryItem>>(new SortLibraryItemByType());
+            ServiceRunner<bool> servericeRunner = new ServiceRunner<bool>(new UpdateEmployee(13, "Manager", "Manager", 1.8F, false, false, 14));
 
-            List <LibraryItem> list = servericeRunner.Run();
-
-            foreach(LibraryItem item in list)
-            {
-                item.Print();
-            }
-
+            Console.WriteLine(servericeRunner.Run());
         }
     }
 }

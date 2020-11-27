@@ -53,9 +53,9 @@ namespace Library.Domain
 
         public void Print()
         {
-            Console.WriteLine($"ID: {Id}, CategoryID: {CategoryId}, Tittle: {ChangeInput.AcronymTheTittle(Title)}, " +
+            Console.WriteLine($"ID: {Id}, CategoryID: {CategoryId}, Tittle: {TextConverter.AcronymTheTittle(Title)}, " +
                 $"Author: {Author}, Pages: {Pages}, Run Time Minutes: {RunTimeMinutes}, Borrowable: {IsBorrowable}, " +
-                $"Borrower: {Borrower}, Borrowed Date: {BorrowDate}, Type: {Type}");
+                $"Borrower: {Borrower}, Borrowed Date: {TextConverter.DateWithoutTime(BorrowDate)}, Type: {Type}");
         }
     }
 }

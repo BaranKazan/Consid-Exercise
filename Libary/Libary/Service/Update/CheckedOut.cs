@@ -25,7 +25,7 @@ namespace Library.Service.Update
             LibraryItem libraryItem = libraryItemDao.Get(this.itemId);
             if (libraryItem.IsBorrowable)
                 throw new Exception("The item is not allowed to be borrowed.");
-            libraryItem.BorrowDate = DateTime.Now;
+            libraryItem.BorrowDate = DateTime.Today;
             libraryItem.Borrower = this.borrower;
             return libraryItemDao.Update(libraryItem);
         }

@@ -3,9 +3,9 @@ namespace Library.Helper
 {
 
     /*
-     * This class handles the input changes that are required.
+     * This class handles the input the output changes of the text.
      */
-    public class ChangeInput
+    public class TextConverter
     {
 
         //Adds a acronym right next to the tittle.
@@ -19,6 +19,21 @@ namespace Library.Helper
             };
             tittle += ")";
             return tittle;
+        }
+
+        /*
+         * Removed the time out of the date.
+         */
+        public static String DateWithoutTime(DateTime? dateTime)
+        {
+            if (dateTime.HasValue)
+            {
+                return dateTime.Value.ToString("dd-MM-yyyy");
+            }
+            else
+            {
+                return String.Empty;
+            }
         }
     }
 }

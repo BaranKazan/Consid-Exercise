@@ -14,11 +14,17 @@ namespace Library.DAO
 
         private ConnectionManager connectionManager = null;
 
+        /*
+         * Constructor that gets single instance of ConnectionManager.
+         */
         public CategoryDao()
         {
             this.connectionManager = ConnectionManager.getInstance();
         }
 
+        /*
+         * Extra constructor for testing by using depedency injection method
+         */
         public CategoryDao(ConnectionManager connectionManager)
         {
             this.connectionManager = connectionManager;

@@ -14,11 +14,17 @@ namespace Library.DAO
 
         private ConnectionManager connectionManager = null;
 
+        /*
+         * Constructor that gets single instance of ConnectionManager.
+         */
         public EmployeeDao()
         {
             this.connectionManager = ConnectionManager.getInstance();
         }
 
+        /*
+         * Extra constructor for testing by using depedency injection method
+         */
         public EmployeeDao(ConnectionManager connectionManager)
         {
             this.connectionManager = connectionManager;
@@ -71,7 +77,12 @@ namespace Library.DAO
                 SqlDataReader dataReader = connectionManager.ReadData("SELECT * FROM Employees");
                 employees = new List<Employee>();
                 if (!dataReader.Read())
-                    throw new Exception("The table is empty.");
+                {
+                    dataReader.Close();
+                    connectionManager.CloseConnection();
+                    return employees;
+                }
+                    
                 do
                 {
                     employees.Add(new Employee(dataReader.GetInt32(0), dataReader.GetString(1),
