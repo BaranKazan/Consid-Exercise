@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Library.DAO;
 using Library.Domain;
+using Library.Helper;
 
 namespace Library.Service.Update
 {
@@ -34,6 +35,11 @@ namespace Library.Service.Update
 
         public bool Run()
         {
+            if (!CheckInput.checkFirstName(this.firstName))
+                throw new Exception("The input of the first name is not right");
+            if (!CheckInput.checkLastName(this.lastName))
+                throw new Exception("The input of the last name is not right");
+
             List<Employee> employees = employeeDao.GetAll();
             foreach(Employee employee in employees)
             {

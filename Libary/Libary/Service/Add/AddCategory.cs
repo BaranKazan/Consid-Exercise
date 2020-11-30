@@ -1,6 +1,7 @@
 ﻿using System;
 using Library.DAO;
 using Library.Domain;
+using Library.Helper;
 
 namespace Library.Service.Add
 {
@@ -24,7 +25,15 @@ namespace Library.Service.Add
          */
         public bool Run()
         {
-            return categoryDao.Save(new Category(this.categoryName));
+            if (!CheckInput.checkCategoryName(this.categoryName)){
+                throw new Exception("The input of category name is not correct");
+            }
+            else
+            {
+                return categoryDao.Save(new Category(this.categoryName));
+            }
+
+            
         }
     }
 }

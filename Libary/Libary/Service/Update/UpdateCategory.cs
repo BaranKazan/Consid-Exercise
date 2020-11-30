@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Library.DAO;
 using Library.Domain;
+using Library.Helper;
 
 namespace Library.Service.Update
 {
@@ -23,6 +24,10 @@ namespace Library.Service.Update
 
         public bool Run()
         {
+            if (!CheckInput.checkCategoryName(this.categoryName))
+                throw new Exception("The input of the category name is not correct");
+
+
             List<Category> categories = categoryDao.GetAll();
             foreach(Category category in categories)
             {

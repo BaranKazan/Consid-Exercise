@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Library.DAO;
 using Library.Domain;
+using Library.Helper;
 
 namespace Library.Service.Add
 {
@@ -35,6 +36,12 @@ namespace Library.Service.Add
 
         public bool Run()
         {
+            if (!CheckInput.checkFirstName(this.firstName))
+                throw new Exception("The input of the first name is not right");
+            if (!CheckInput.checkLastName(this.lastName))
+                throw new Exception("The input of the last name is not right");
+
+
             if (this.isCeo && !this.isManager)
             {
                 if (this.managerId != null)

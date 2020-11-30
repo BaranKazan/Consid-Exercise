@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Library.DAO;
 using Library.Domain;
+using Library.Helper;
 
 namespace Library.Service.Update
 {
@@ -45,27 +46,27 @@ namespace Library.Service.Update
                     switch (this.categoryId)
                     {
                         case 1:
-                            if (this.title == "")
+                            if (!CheckInput.checkTitle(this.title))
                                 throw new Exception("The title of the book is empty");
-                            else if (this.author == "")
-                                throw new Exception("The author of the book is empty");
-                            else if (this.pages == 0 || this.pages == null)
-                                throw new Exception("The number of pages is required for the book");
-                            else if (this.type == "")
-                                throw new Exception("The type of the book is required.");
+                            else if (!CheckInput.checkAuthor(this.author))
+                                throw new Exception("Check the input of the authors name");
+                            else if (!CheckInput.checkPages(this.pages))
+                                throw new Exception("The number of pages is required to be grater than 0 for the book");
+                            else if (!CheckInput.checkType(this.type))
+                                throw new Exception("Check the input type of the book");
                             else
                                 return libraryItemDao.Update(new LibraryItem(id, categoryId, title, author, pages,
                                     runTimeMinutes, isBorrowable, item.Borrower, item.BorrowDate, type));
 
                         case 2:
-                            if (this.title == "")
+                            if (!CheckInput.checkTitle(this.title))
                                 throw new Exception("The title of the reference book is empty");
-                            else if (this.author == "")
-                                throw new Exception("The author of the book is empty");
-                            else if (this.pages == 0 || this.pages == null)
-                                throw new Exception("The number of pages is required for the reference book");
-                            else if (this.type == "")
-                                throw new Exception("The type of the reference book is required.");
+                            else if (!CheckInput.checkAuthor(this.author))
+                                throw new Exception("Check the input of the authors name");
+                            else if (!CheckInput.checkPages(this.pages))
+                                throw new Exception("The number of pages is required to be grater than 0 for the reference book");
+                            else if (!CheckInput.checkType(this.type))
+                                throw new Exception("Check the input type of the reference book");
                             else if (this.isBorrowable)
                                 throw new Exception("Any reference book cant be borrowed");
                             else
@@ -73,31 +74,31 @@ namespace Library.Service.Update
                                     runTimeMinutes, isBorrowable, item.Borrower, item.BorrowDate, type));
 
                         case 3:
-                            if (this.title == "")
+                            if (!CheckInput.checkTitle(this.title))
                                 throw new Exception("The title of the DVD is empty");
-                            else if (this.runTimeMinutes == 0 || this.runTimeMinutes == null)
-                                throw new Exception("The number of run time minutes is required for the DVD");
-                            else if (this.type == "")
-                                throw new Exception("The type of the DVD is required.");
+                            else if (!CheckInput.checkRunTimeMinutes(this.runTimeMinutes))
+                                throw new Exception("The number of run time minutes is required to be greater than 0 for the DVD");
+                            else if (!CheckInput.checkType(this.type))
+                                throw new Exception("Check the input type of the DVD");
                             else
                                 return libraryItemDao.Update(new LibraryItem(id, categoryId, title, author, pages,
                                     runTimeMinutes, isBorrowable, item.Borrower, item.BorrowDate, type));
 
                         case 4:
-                            if (this.title == "")
+                            if (!CheckInput.checkTitle(this.title))
                                 throw new Exception("The title of the audio book is empty");
-                            else if (this.runTimeMinutes == 0 || this.runTimeMinutes == null)
-                                throw new Exception("The number of run time minutes is required for the audio book");
-                            else if (this.type == "")
-                                throw new Exception("The type of the audio book is required.");
+                            else if (!CheckInput.checkRunTimeMinutes(this.runTimeMinutes))
+                                throw new Exception("The number of run time minutes is required to be hreater than 0 for the audio book");
+                            else if (!CheckInput.checkType(this.type))
+                                throw new Exception("Check the input type of the audio book");
                             else
                                 return libraryItemDao.Update(new LibraryItem(id, categoryId, title, author, pages,
                                     runTimeMinutes, isBorrowable, item.Borrower, item.BorrowDate, type));
                         default:
-                            if (this.title == "")
+                            if (!CheckInput.checkTitle(this.title))
                                 throw new Exception("The title of the category is empty");
-                            else if (this.type == "")
-                                throw new Exception("The type of the category is required.");
+                            else if (!CheckInput.checkType(this.type))
+                                throw new Exception("Check the input type of the category");
                             else
                                 return libraryItemDao.Update(new LibraryItem(id, categoryId, title, author, pages,
                                     runTimeMinutes, isBorrowable, item.Borrower, item.BorrowDate, type));
